@@ -1,18 +1,22 @@
 #include <stdio.h>
 /**
- * main - determines if the value of the random number
- * * generated is positive, zero or negative
+ * main - Lists all the natural numbers below 1024 (excluded)
+ * that are multiples of 3 or 5.
  *
- * Return: returns zero ar the end
+ * Return: Always (0).
  */
+
 int main(void)
 {
-	char ch;
+	int i, sum;
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+	sum = 0;
+	for (i = 0; i < 1024; i++)
 	{
-		putchar(ch);
+		if ((i % 3) == 0 || (i % 5) == 0)
+			sum += i;
 	}
-	putchar('\n');
+	printf("%d\n", sum);
+
 	return (0);
 }

@@ -1,33 +1,29 @@
 #include <stdio.h>
-/**
- * main - print possible combo of 3
- *
- * Return: returns zero ar the end
- */
-int main(void)
-{
-	int i, j, k;
 
-	for (i = 0; i <= 9; i++)
+/**
+* print_to_98 - prints all natural numbers
+* from n to 98, followed by a new line
+*
+* @n: input number.
+*
+* Return: no return.
+*/
+
+void print_to_98(int n)
+{
+	if (n > 98)
 	{
-		for (j = 1; j <= 9; j++)
+		for (; n > 98; n--)
 		{
-			for (k = 2; k <= 9; k++)
-			{
-			if (k > j && j > i)
-			{
-				putchar(i + '0');
-				putchar(j + '0');
-				putchar(k + '0');
-					if (i != 7)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-			}
+			printf("%d, ", n);
 		}
 	}
-	putchar('\n');
-	return (0);
+	else if (n < 98)
+	{
+		for (; n < 98; n++)
+		{
+			printf("%d, ", n);
+		}
+	}
+	printf("%d\n", n);
 }

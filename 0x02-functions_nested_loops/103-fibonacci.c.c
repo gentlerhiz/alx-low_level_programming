@@ -1,21 +1,35 @@
 #include <stdio.h>
+
 /**
- * main - print alphabet in lowercase, and then uppercase
- * except q and e
+ * main - Prints the sum of even-valued Fibonacci sequence
+ * terms not exceeding 4000000.
  *
- * Return: returns zero ar the end
+ * Return: Always 0.
  */
+
 int main(void)
 {
-	char ch;
+	unsigned long fib, prevFib, prev2Fib;
+	float sum;
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+	prevFib = 1;
+	prev2Fib = 0;
+
+	while (1)
 	{
-		if (ch != 'q' && ch != 'e')
-		{
-			putchar(ch);
-		}
+		fib = prevFib + prev2Fib;
+
+		if (fib > 4000000)
+			break;
+
+		if ((fib % 2) == 0)
+			sum += fib;
+		prev2Fib = prevFib;
+		prevFib = fib;
+
 	}
-	putchar('\n');
+
+	printf("%.0f\n", sum);
+
 	return (0);
 }

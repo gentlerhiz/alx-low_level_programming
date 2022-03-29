@@ -1,34 +1,21 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-/* more headers goes there */
+#include "main.h"
 
 /**
- * main - determines if the value of the random number
- * * generated is positive, zero or negative
- *
- * Return: returns zero ar the end
- */
+* main - Print the word "_putchar"
+*
+* Return: Always 0
+*/
 
-/* betty style doc for function main goes there */
 int main(void)
 {
-	int n;
+	int i;
+	char p[] = "_putchar";
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	if (n > 0)
+	for (i = 0; i < 8; i++)
 	{
-		printf("%d is positive\n", n);
+		_putchar(p[i]);
 	}
-	else if (n == 0)
-	{
-		printf("%d is zero\n", n);
-	}
-	else
-	{
-		printf("%d is negative\n", n);
-	}
+	_putchar('\n');
+
 	return (0);
 }

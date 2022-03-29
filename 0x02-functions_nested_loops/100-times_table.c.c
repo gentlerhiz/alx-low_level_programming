@@ -1,35 +1,50 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-/* more headers goes there */
-
+#include "main.h"
 /**
- * main - determines if the value of the random number
- * * generated is positive, zero or negative
+ * print_times_table - prints the n times table, starting with 0
  *
- * Return: returns zero ar the end
+ * @n: number times table (0 < n <= 15)
+ *
+ * Returns- void
  */
-
-/* betty style doc for function main goes there */
-int main(void)
+void print_times_table(int n)
 {
-	int n, LastDigit;
+	int i, j, k;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	LastDigit = n % 10;
-	if (LastDigit > 5)
+	if (n >= 0 && n <= 15)
 	{
-	printf("Last digit of %d is %d and is greater than 5\n", n, LastDigit);
+		for (i = 0; i <= n; i++)
+		{
+			for (j = 0; j <= n; j++)
+			{
+				k = j * i;
+				if (j == 0)
+					_putchar(k + '0');
+				else if (k < 10)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(k + '0');
+				}
+				else if (k < 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((k / 10) + '0');
+					_putchar((k % 10) + '0');
+				}
+				else
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar((k / 100) + '0');
+					_putchar(((k % 100) / 10) + '0');
+					_putchar(((k % 100) % 10) + '0');
+				}
+			}
+				_putchar('\n');
+		}
 	}
-	else if (LastDigit == 0)
-	{
-	printf("Last digit of %d is %d and is 0\n", n, LastDigit);
-	}
-	else
-	{
-	printf("Last digit of %d is %d and is less than 6 and not 0\n", n, LastDigit);
-	}
-	return (0);
 }

@@ -1,35 +1,18 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-/* more headers goes there */
+#include "main.h"
 
 /**
- * main - determines if the value of the random number
- * * generated is positive, zero or negative
- *
- * Return: returns zero ar the end
- */
+* print_alphabet - Print the alphabet in lowercase.
+*
+* Return: void.
+*/
 
-/* betty style doc for function main goes there */
-int main(void)
+void print_alphabet(void)
 {
-	int n, LastDigit;
+	int i;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	LastDigit = n % 10;
-	if (LastDigit > 5)
+	for (i = 97; i < 123; i++)
 	{
-	printf("Last digit of %d is %d and is greater than 5\n", n, LastDigit);
+		_putchar(i);
 	}
-	else if (LastDigit == 0)
-	{
-	printf("Last digit of %d is %d and is 0\n", n, LastDigit);
-	}
-	else
-	{
-	printf("Last digit of %d is %d and is less than 6 and not 0\n", n, LastDigit);
-	}
-	return (0);
+		_putchar('\n');
 }

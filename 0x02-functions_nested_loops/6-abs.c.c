@@ -1,17 +1,19 @@
-#include <stdio.h>
-/**
- * main - print single digit numbers starting from 0
- *
- * Return: returns zero ar the end
- */
-int main(void)
-{
-	int i;
+#include "main.h"
 
-	for (i = 0; i < 10; i++)
+/**
+* _abs - gives the absolute value
+* of an integer.
+*
+* @n: input number as an integer.
+*
+* Return: the absolute value of int n
+*/
+
+int _abs(int n)
+{
+	if (n < 0)
 	{
-		putchar(i + '0');
+		return (n * -1);
 	}
-	putchar('\n');
-	return (0);
+	return (n);
 }

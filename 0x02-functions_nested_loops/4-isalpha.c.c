@@ -1,21 +1,23 @@
-#include <stdio.h>
-/**
- * main - print alphabet in lowercase, and then uppercase
- * except q and e
- *
- * Return: returns zero ar the end
- */
-int main(void)
-{
-	char ch;
+#include "main.h"
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+/**
+* _isalpha - Retuns 1 if char c is a letter,
+* and a lowercase or uppercase
+*
+* @c: The character in ASCII code
+*
+* Return: 1 for lowercase. 0 for the rest.
+*/
+
+int _isalpha(int c)
+{
+	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
 	{
-		if (ch != 'q' && ch != 'e')
-		{
-			putchar(ch);
-		}
+		return (1);
 	}
-	putchar('\n');
-	return (0);
+	else
+	{
+		return (0);
+	}
+	_putchar('\n');
 }

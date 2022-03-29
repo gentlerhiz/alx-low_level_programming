@@ -1,22 +1,23 @@
-#include <stdio.h>
-/**
- * main - ilphabet in lowercase, and then uppercase
- *
- *
- * Return: returns zero ar the end
- */
-int main(void)
-{
-	char ch;
+#include "main.h"
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+/**
+* _islower - Retuns 1 if char is lowercase character
+* else, return 0
+*
+* @c: The character in ASCII code
+*
+* Return: 1 for lowercase. 0 for the rest.
+*/
+
+int _islower(int c)
+{
+	if (c >= 97 && c <= 122)
 	{
-		putchar(ch);
+		return (1);
 	}
-	for (ch = 'A'; ch <= 'Z'; ch++)
+	else
 	{
-		putchar(ch);
+		return (0);
 	}
-	putchar('\n');
-	return (0);
+	_putchar('\n');
 }

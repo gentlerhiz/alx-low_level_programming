@@ -1,29 +1,35 @@
-#include <stdio.h>
-/**
- * main - print single digit numbers starting from 0
- *
- * Return: returns zero ar the end
- */
-int main(void)
-{
-	int i, j;
+#include "main.h"
 
-	for (i = 0; i <= 9; i++)
+/**
+* jack_bauer - prints every minute of the day
+*
+* Return: no return
+*/
+
+void jack_bauer(void)
+{
+	int a, b, c, d;
+
+	for (a = 0; a <= 2; a++)
 	{
-		for (j = 1; j <= 9; j++)
+		for (b = 0; b <= 9; b++)
 		{
-			if (j > i)
+			for (c = 0; c <= 5; c++)
 			{
-				putchar(i + '0');
-				putchar(j + '0');
-				if (i != 8)
+				for (d = 0; d <= 9; d++)
 				{
-					putchar(',');
-					putchar(' ');
+					if (a >= 2 && b >= 4)
+
+					break;
+
+					_putchar(a + '0');
+					_putchar(b + '0');
+					_putchar(':');
+					_putchar(c + '0');
+					_putchar(d + '0');
+					_putchar('\n');
 				}
 			}
 		}
 	}
-	putchar('\n');
-	return (0);
 }

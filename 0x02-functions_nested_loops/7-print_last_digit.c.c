@@ -1,17 +1,28 @@
-#include <stdio.h>
-/**
- * main - print alphabet in lowercase, but in reverse
- *
- * Return: returns zero ar the end
- */
-int main(void)
-{
-	char ch;
+#include "main.h"
 
-	for (ch = 'z'; ch >= 'a'; ch--)
+/**
+* print_last_digit - Prints the last digit
+* of a number.
+*
+* @n: input number as an integer.
+*
+* Return: last digit.
+*/
+
+int print_last_digit(int n)
+{
+	int l;
+
+	l = n % 10;
+
+	if (l < 0)
 	{
-		putchar(ch);
+		_putchar(-l + 48);
+		return (-l);
 	}
-	putchar('\n');
-	return (0);
+	else
+	{
+		_putchar(l + 48);
+		return (l);
+	}
 }

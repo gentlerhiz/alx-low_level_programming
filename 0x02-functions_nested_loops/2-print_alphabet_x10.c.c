@@ -1,18 +1,21 @@
-#include <stdio.h>
-/**
- * main - determines if the value of the random number
- * * generated is positive, zero or negative
- *
- * Return: returns zero ar the end
- */
-int main(void)
-{
-	char ch;
+#include "main.h"
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+/**
+* print_alphabet_x10 - Prints the alphabet 10 times.
+*
+* Return: Always 0
+*/
+
+void print_alphabet_x10(void)
+{
+	int i, j;
+
+	for (i = 0; i <= 9; i++)
 	{
-		putchar(ch);
+		for (j = 97; j <= 122; j++)
+		{
+			_putchar(j);
+		}
+			_putchar('\n');
 	}
-	putchar('\n');
-	return (0);
 }
