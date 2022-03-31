@@ -1,24 +1,29 @@
-0x01. C - Variables, if, else, while
-Project done during Full Stack Software Engineering studies at Holberton School. It aims to learn about arithmetic operators, relational operators, boolean operators, comments, declaring variables and loops in C language.
+# 0x05. C - Pointers, arrays and strings
 
-Technologies
-Tested on Ubuntu 20.04 LTS
+## About
 
-Files
-Find the C files and the decscription of twhat they do below:
+> Project involves working with arrays, pointers and strings in C.
 
-Filename	Description
-0-positive_or_negative.c	Prints is positive, is zero or is negative when a randomly generated number is any of these cases
-1-last_digit.c	Prints the last digit of a randomly generated number
-2-print_alphabet.c	Prints the alphabet in lowercase
-3-print_alphabets.c	Prints the alphabet in lowercase, and then in uppercase
-4-print_alphabet.c	Prints the alphabet in lowercase, except q and e letters
-5-print_numbers.c	Prints all single digit numbers of base 10 starting from 0
-6-print_numberz.c	Prints all single digit numbers of base 10 starting from 0, without using char variables
-7-print_tebahpla.c	Prints the lowercase alphabet in reverse
-8-print_base16.c	Prints all the numbers of base 16 in lowercase
-9-print_comb.c	Prints all possible combinations of single-digit numbers
-10-print_comb2.c	Prints the numbers from 00 to 99
-100-print_comb3.c	Prints all possible different combinations of two digits, separated by ,
-101-print_comb4.c	Prints all possible different combinations of three digits, separated by ,
-102-print_comb5.c	Prints all possible combinations of two two-digit numbers
+## Technologies
+
+* Tested on Ubuntu 20.04 LTS
+
+## Files
+
+All of the following files are programs written in C:
+
+
+| Filename | Description |
+| -------- | ----------- |
+| [0-reset_to_98.c](./0-reset_to_98.c) | Takes a pointer to an `int` as parameter and updates the value it points to `98` |
+| [1-swap.c](./1-swap.c) | Swaps the values of two integers |
+| [2-strlen.c](./2-strlen.c) | Returns the length of a string |
+| [3-puts.c](./3-puts.c) | Prints a string to `stdout` |
+| [4-print_rev.c](./4-print_rev.c) | Prints a string, in reverse |
+| [5-rev_string.c](./5-rev_string.c) | Reverses a string |
+| [6-puts2.c](./6-puts2.c) | Prints every other character of a string, starting with the first character |
+| [7-puts_half.c](./7-puts_half.c) | Prints half of a string |
+| [8-print_array.c](./8-print_array.c) | Prints `n` elements of an array of integers |
+| [9-strcpy.c](./9-strcpy.c) | Copies the string pointed to by `src`, including the terminating null byte, to the buffer pointed to by `dest` |
+| [100-atoi.c](./100-atoi.c) | Converts a string to an integer |
+| [101-keygen.c](./101-keygen.c) | Generates random valid passwords for the program `101-crackme` |
